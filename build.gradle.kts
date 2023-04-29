@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "ee.carlrobert"
-version = "1.0.9"
+version = "1.0.10"
 
 repositories {
   mavenCentral()
@@ -40,6 +40,9 @@ nexusPublishing {
 }
 
 publishing {
+  repositories {
+    mavenLocal()
+  }
   publications {
     create<MavenPublication>("mavenJava") {
       from(components["java"])

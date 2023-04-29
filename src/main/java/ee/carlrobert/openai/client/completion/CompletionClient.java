@@ -14,9 +14,9 @@ public abstract class CompletionClient extends BaseClient {
 
   private final String url;
 
-  public CompletionClient(OpenAIClient client, String url) {
+  public CompletionClient(OpenAIClient client, String path) {
     super(client);
-    this.url = url;
+    this.url = client.getBaseUrl() + path;
   }
 
   protected abstract CompletionEventSourceListener getEventListener(CompletionEventListener listeners);

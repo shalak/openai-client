@@ -10,10 +10,11 @@ import okhttp3.Request;
 
 public class DashboardClient extends BaseClient {
 
-  private static final String baseUrl = "https://api.openai.com/dashboard/billing";
+  private final String baseUrl;
 
   public DashboardClient(OpenAIClient client) {
     super(client);
+    this.baseUrl = client.getBaseUrl() + "/dashboard/billing";
   }
 
   @Override

@@ -10,7 +10,7 @@ import okhttp3.sse.EventSource;
 public class TextCompletionClient extends CompletionClient {
 
   public TextCompletionClient(OpenAIClient client) {
-    super(client, "https://api.openai.com/v1/completions");
+    super(client, "/v1/completions");
   }
 
   @Override
